@@ -1,18 +1,18 @@
-name: Dump all payload made available to github actions
+# name: Dump all payload made available to github actions
 
-on:
-    push:
-        branches:
-            - main
-    pull_request:
-        branches:
-            - main
-    workflow_dispatch:
+# on:
+#     push:
+#         branches:
+#             - main
+#     pull_request:
+#         branches:
+#             - main
+#     workflow_dispatch:
 
-jobs:
-    payload_dump:
-        runs-on: ubuntu-latest
-        steps:
-            - name: dump github context
-              run: echo '${{ toJSON(github.event) }}' | jq
-              shell: bash
+# jobs:
+#     payload_dump:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: dump github context
+#               run: echo '${{ toJSON(github.event) }}' | jq
+#               shell: bash
